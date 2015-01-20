@@ -1,0 +1,8 @@
+We define our constraint satisfaction problem using several components: the variables, the domain for each variable, and a set of constraints on the allowable combination of values. Each domain consists of a set of allowed values for each variable. Each constraint consists of a pair (scope, rel) where scope is a tuple of variables in the constraint and rel is the relation that defines the values that the variables in scope can take on. In order to solve a CSP, we define a state space and the idea of a solution. Each state is defined by an assignment of values to some or all of the variables. An assignment that does not violate any constraints is a consistent assignment. A complete assignment is one in which each variable is assigned. Thus, a solution to a CSP is a consistent and complete assignment.
+
+We do this by using a BackTracker that follows the backtracking search for CSPs algorithm. Adding features such MRV (minimum remaining value) and LCV (least constraining value) heuristics and MAC-3 (Maintaining Arc Consistency) inferencing will help our backtracking algorithm perform better.
+
+The two problems we solve using this are:
+
+Map coloring problem
+Circuit board problem
